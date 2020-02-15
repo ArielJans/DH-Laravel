@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Ranking;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'nombre', 'email', 'user', 'role', 'password', 'puntaje', 'imagen'
     ];
 
     /**
@@ -36,4 +37,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function ranking(){
+    	return $this->hasMany(Ranking::class, 'id_usuario');
+    } 
 }
