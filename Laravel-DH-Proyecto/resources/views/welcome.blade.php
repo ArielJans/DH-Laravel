@@ -1,28 +1,18 @@
-	{{--
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>El título de mi página</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-</head>
-<body>
-	<header>
-		<h1>Header</h1>
-	</header>
-	<!-- Aquí empieza el contenido principal de nuestra página -->
-	<main>
-		<h2>Relacionado</h2>
-	</main>
-	<footer>
-		<p>©Copyright 2050 by nobody. All rights reversed.</p>
-	</footer>
-</body>
-</html>--}}
 @extends('layout.main')
-
+@section('title','QUESTION RACE')
 @section('imagenDeFondo', 'images/fondo-web.jpg')
+@section('styles','css/styles-index.css')
+@section('scripts')
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous"></script>
+@endsection
 
 @section('main')
 
