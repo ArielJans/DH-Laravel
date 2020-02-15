@@ -42,7 +42,7 @@
 <body>
     <span id="home"></span>
     <div id="app">
-        <nav id="menu" class="navbar navbar-expand-md navbar-light shadow-sm position-fixed w-100">
+        <nav id="menu" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +55,7 @@
                     <!-- Right Side Of Navbar -->
 
                         <!-- Authentication Links -->
-                        <ul id="leftside" class="navbar-nav">
+                        <ul id="leftside" class="navbar-nav ml-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="/">HOME</a>
                         </li>
