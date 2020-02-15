@@ -2,6 +2,12 @@
 
 @section('content')
 <img class="img-header" src="./images/fondo-web.jpg" alt="">
+
+<section class="call-to-action">
+  <h2 class="tex-cta">Empeza a jugar ahora!!</h2>
+  <button type="button" class="btn btn-cta btn-primary btn-lg btn-warning"><a href="/juego">COMENZAR</a></button>
+</section>
+
 <div class="container my-5">
 
 		<div class="row d-flex align-items-center my-5 py-5">
@@ -51,8 +57,4 @@
 		</div>
 	</div>
 
-	<section class="call-to-action">
-		<h2 class="tex-cta">Empeza a jugar ahora!!</h2>
-		<button type="button" class="btn btn-cta btn-primary btn-lg btn-warning"><a href="login.php">COMENZAR</a></button>
-	</section>
 @endsection
