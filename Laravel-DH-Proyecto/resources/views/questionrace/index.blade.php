@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<img class="img-header" src="./img/fondo-web.jpg" alt="">
+<img class="img-header" src="./images/fondo-web.jpg" alt="">
 <div class="container my-5">
 
 		<div class="row d-flex align-items-center my-5 py-5">
