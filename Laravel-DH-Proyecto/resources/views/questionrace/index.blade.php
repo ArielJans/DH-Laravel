@@ -55,3 +55,4 @@
 		<h2 class="tex-cta">Empeza a jugar ahora!!</h2>
 		<button type="button" class="btn btn-cta btn-primary btn-lg btn-warning"><a href="login.php">COMENZAR</a></button>
 	</section>
+@endsection
