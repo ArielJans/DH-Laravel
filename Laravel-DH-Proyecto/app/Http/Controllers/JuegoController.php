@@ -27,7 +27,7 @@ class JuegoController extends Controller
         return view('burnquiz.juego', compact('pregunta', 'respuestas', 'random'));
     }
     public function verificacion(Request $req){
-        
+
         $respuesta = DB::table('respuestas')->where([
             ['id_pregunta', '=', $req['pregunta_id']],
             ['validacion', '=', 'c'],
@@ -38,32 +38,31 @@ class JuegoController extends Controller
             $random[] = $val;
         }
         foreach($respuesta as $rtaCorrecta);
-        if ($req['rta'] == $rtaCorrecta->respuesta) { 
+        if ($req['rta'] == $rtaCorrecta->respuesta) {
             $puntaje = session()->get('puntaje', 0);
-            session(['puntaje' => ++$puntaje]);           
+            session(['puntaje' => ++$puntaje]);
             $preguntaAnterior = $req['pregunta_id'];
             $preguntaAnterior++;
             $pregunta = DB::table('preguntas')->where('id', '=', $preguntaAnterior)->first();
             $respuestas = DB::table('respuestas')->where('id_pregunta', '=', $pregunta->id)->get();
-            return view('burnquiz.juego', compact('pregunta', 'respuestas', 'random'));;
+            return view('questionrace.juego', compact('pregunta', 'respuestas', 'random'));;
         } else {
             $puntajeFinal = new Ranking;
             $puntajeFinal->usuario = Auth::user()->user;
             $puntajeFinal->puntaje = session()->get('puntaje');
             $puntajeFinal->save();
-            return view('burnquiz.resultado');
+            return view('questionrace.resultado');
         }
     }
 
 
 
 
-    public function proximo(Request $req){ 
+    public function proximo(Request $req){
         $preguntaAnterior = $req['id'];
         $pregunta = DB::table('preguntas')->where('id', '=', $preguntaAnterior + 1)->first();
         $respuestas = DB::table('respuestas')->where('id_pregunta', '=', $pregunta->id)->get();
         //if($pregunta == null
-        return view('burnquiz.juego', compact('pregunta', 'respuestas'));
+        return view('questionrace.juego', compact('pregunta', 'respuestas'));
     }
 }
-

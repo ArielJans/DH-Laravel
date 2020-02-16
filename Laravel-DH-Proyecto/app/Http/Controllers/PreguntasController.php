@@ -18,7 +18,7 @@ class PreguntasController extends Controller
     {
         $preguntas = Pregunta::all();
         $respuestas = Respuesta::all();
-        return view('burnquiz.admin.preguntas', compact('preguntas','respuestas'));
+        return view('questionrace.admin.preguntas', compact('preguntas','respuestas'));
     }
 
     /**
@@ -28,21 +28,21 @@ class PreguntasController extends Controller
      */
     public function create()
     {
-        return view('burnquiz.cargarpreguntas');  
+        return view('question.cargarpreguntas');
     }
 
     /**
      * Store a newly created resource in storage.
-     * 
+     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   
+    {
         $pregunta = new Pregunta;
         $pregunta->pregunta = $request->pregunta;
         $pregunta->save();
-/* 
+/*
         $preguntas = DB::table('preguntas')
                 ->orderBy('id', 'desc')
                 ->first(); */
@@ -54,8 +54,8 @@ class PreguntasController extends Controller
             $respuesta->save();
         }
 
-        
-        return view('burnquiz.cargarpreguntas',['mensaje' => 'Registro cargado con exito']);
+
+        return view('questionRace.cargarpreguntas',['mensaje' => 'Registro cargado con exito']);
     }
 
     /**
@@ -82,7 +82,7 @@ class PreguntasController extends Controller
         //$respuestas = DB::table('respuestas')->where('id_pregunta', '=', $id)->get();
         //dd($pregunta->respuestas, $respuestas );
         //$rtas = $respuestas->toArray();
-        return view('burnquiz.admin.editarpregunta',compact('pregunta'));
+        return view('questionrace.admin.editarpregunta',compact('pregunta'));
     }
 
     /**
@@ -92,7 +92,7 @@ class PreguntasController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
-    {  
+    {
         $pregunta = Pregunta::findOrFail($request->id);
         $pregunta->pregunta = $request->pregunta;
         $pregunta->save();

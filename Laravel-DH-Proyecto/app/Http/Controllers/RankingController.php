@@ -11,6 +11,6 @@ class RankingController extends Controller
     public function listar(){
         $ranking = Ranking::orderBy('puntaje', 'desc')->get();
         $a = 0;
-        return view('burnquiz.ranking', compact('ranking', 'a'));
+        return view('questionrace.ranking', compact('ranking', 'a'));
     }
 }

@@ -16,7 +16,7 @@ class RespuestasController extends Controller
     public function index()
     {
         $respuesta = Respuesta::all();
-        return view('burnquizz.admin.preguntas', compact('respuestas'));
+        return view('questionrace.admin.preguntas', compact('respuestas'));
     }
 
     /**
@@ -26,7 +26,7 @@ class RespuestasController extends Controller
      */
     public function create()
     {
-        return view('cargarrespuesta');  
+        return view('cargarrespuesta');
     }
 
     /**
@@ -78,7 +78,7 @@ class RespuestasController extends Controller
     {
         $respuestas = Respuesta::findOrFail($id);
         //dd($respuestas);
-        return view('burnquiz.admin.editarpregunta',compact('respuestas'));
+        return view('questionrace.admin.editarpregunta',compact('respuestas'));
     }
 
     /**
