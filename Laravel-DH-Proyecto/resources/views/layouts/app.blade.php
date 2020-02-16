@@ -109,7 +109,7 @@
             </div>
         </nav>
     </div>
-        <main class="bg-dark">
+        <main class="main py-5">
             @yield('content')
         </main>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

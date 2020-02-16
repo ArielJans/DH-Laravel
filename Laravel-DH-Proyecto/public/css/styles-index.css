@@ -9,6 +9,9 @@
 .bg-dark {
     background-color: #4c3673d4!important;
 }
+.main.py-5{
+  background-color: #673ab766;
+}
 
 footer{
     background-color: #4c3673d4!important;
@@ -51,5 +54,5 @@ footer{
 }
 .main1{
   background-color: violet;
-  
+
 }
