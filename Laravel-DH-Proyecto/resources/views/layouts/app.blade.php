@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>QuestionRace</title>
-    <link rel="shortcut icon" href="storage/burnquiz_logow.png">
+    <link rel="shortcut icon" href="storage/logow.png">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/.png">
     <link rel="stylesheet" href="{{asset('css/styles-index.css')}}">
+    <link rel="stylesheet" href="{{asset('css/styles-contacto.css')}}">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
@@ -108,7 +109,7 @@
             </div>
         </nav>
     </div>
-        <main class="py-5">
+        <main class="bg-dark">
             @yield('content')
         </main>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

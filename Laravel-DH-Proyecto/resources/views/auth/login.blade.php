@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
+                      <img class="mb-4 logo" src="images/medal.png" alt="">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
 
