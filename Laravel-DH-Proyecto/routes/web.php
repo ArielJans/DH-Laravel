@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('/ranking', 'RankingController@listar')->name('burnquiz.ranking');
 
 
-Route::get('/juego', 'JuegoController@traerDatos')->middleware('auth');
+Route::get('/juego', 'JuegoController@traerDatos');
 
 Route::post('/juego/next', 'JuegoController@verificacion');
 

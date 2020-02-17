@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('styles','css/styles-login.css')
 @section('title','Iniciar Sesión')
-@section('main')
+@section('content')
 
 <section class="text-center">
 	<form class="form-signin" action="" method="POST" enctype="multipart/form-data">

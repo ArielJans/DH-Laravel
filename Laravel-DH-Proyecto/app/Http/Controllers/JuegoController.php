@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
 use Auth;
@@ -24,7 +23,7 @@ class JuegoController extends Controller
        /*  foreach($respuestas as $key => $respuesta){
             dd($respuestas[0]->respuesta);
         } */
-        return view('burnquiz.juego', compact('pregunta', 'respuestas', 'random'));
+        return view('questionrace.juego', compact('pregunta', 'respuestas', 'random'));
     }
     public function verificacion(Request $req){
 
