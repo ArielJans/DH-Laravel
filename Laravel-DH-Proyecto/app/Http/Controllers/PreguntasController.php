@@ -28,7 +28,7 @@ class PreguntasController extends Controller
      */
     public function create()
     {
-        return view('question.cargarpreguntas');
+        return view('questionrace.cargarpreguntas');
     }
 
     /**
