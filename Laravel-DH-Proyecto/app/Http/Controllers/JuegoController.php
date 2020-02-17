@@ -23,7 +23,7 @@ class JuegoController extends Controller
        /*  foreach($respuestas as $key => $respuesta){
             dd($respuestas[0]->respuesta);
         } */
-        return view('questionrace.juego', compact('pregunta', 'respuestas', 'random'));
+        return view('questionrace.juego', [ 'pregunta' => $pregunta, 'respuestas' => $respuestas, 'random' => $random ]);
     }
     public function verificacion(Request $req){
 
