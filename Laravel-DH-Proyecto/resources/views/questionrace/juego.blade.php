@@ -6,7 +6,7 @@
 <section class="row text-center">
       <section class="left col-md-4">
             <h2 class="call-to-action">Pregunta #1</h2>
-            <p class="cuestion"> {{ $_GET['pregunta'] }} </p>
+            <p class="cuestion"> </p>
             <!-- /////////////////  OPCIONES DE CHECKBOX ///////////////-->
             <form action="#" method="POST">
                 <label class="radio"> Anden 9 ¾
