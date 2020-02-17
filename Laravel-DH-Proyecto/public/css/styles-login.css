@@ -13,6 +13,11 @@ body{
     background-color: #4c3673d4!important;
 }
 
+.card {
+    margin: 0 auto 0 auto!important;
+    width: 40vw;
+}
+
 footer{
     background-color: #4c3673d4!important;
 }
@@ -23,8 +28,8 @@ footer{
 }
 
 .text-center{
-    width: 30vw;
-    margin: 0 auto;
+    width: 40vw;
+    margin: 0 auto 0 auto!important;
 }
 
 .text-muted{
@@ -46,16 +51,24 @@ input{
     .text-center {
       width: 60vw;
   }
+  .card {
+    width: 60vw;
+  }
 }
 
 .chek{
     margin-top: 1rem;
 }
 
+.container {
+    margin: 0 auto 0 auto!important;
+}
+
 .navbar-brand{
     font-family: 'Luckiest Guy';
     font-size: 2rem;
     color: #ff9800 !important;
+    float: right;
 }
 
 .float-left{
@@ -78,7 +91,7 @@ input{
 }
 
 .recupero-pass {
-    margin-left: 1rem;
+    
 }
 small{
     color: red;

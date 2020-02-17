@@ -1,13 +1,13 @@
 @extends('layouts.app')
-
+@section('styles','css/styles-login.css')
+@section('title','Iniciar Sesión')
 @section('content')
 <div class="container py-5 my-5">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8 ">
             <div class="card">
             <h3 class="text-center">{{ __('Ingresar') }}</h3>
-
-                <div class="card-body">
+                <div class="card-body text-center">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                       <img class="mb-4 logo" src="images/medal.png" alt="">
@@ -39,9 +39,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
+                        <div class="form-group row ">
+                            <div class="col-md-6 offset-md-3">
+                                <div class="form-check ">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                            <div class="col-md-8 offset-md-2">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Ingresar') }}
                                 </button>
