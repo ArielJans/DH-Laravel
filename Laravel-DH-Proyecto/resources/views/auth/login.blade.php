@@ -6,16 +6,15 @@
     <div class="row justify-content-center">
         <div class="col-md-8 ">
             <div class="card">
-            <h3 class="text-center">{{ __('Ingresar') }}</h3>
                 <div class="card-body text-center">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                       <img class="mb-4 logo" src="images/medal.png" alt="">
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
+                      <h3 class="text-center inic">{{ __('Iniciar Sesion') }}</h3>
 
-                            <div class="col-md-6">
-                                <input id="email" type="text" class="form-control @error('user') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="user" autofocus>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <input id="email" type="text" class="form-control @error('user') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="user" placeholder="Email" autofocus>
 
                                 @error('user')
                                     <span class="invalid-feedback" role="alert">
@@ -26,10 +25,8 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <div class="col-md-12">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Contraseña">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -54,13 +51,14 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-2">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Ingresar') }}
+                                    {{ __('Iniciar Sesion') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Olvidé mi contraseña') }}
                                     </a>
+                                    <p class="mt-5 mb-3 text-muted">No estas registrado? <a href="register">Registrarme</a></p>
                                 @endif
                             </div>
                         </div>

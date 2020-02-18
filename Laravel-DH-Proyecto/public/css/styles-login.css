@@ -10,12 +10,14 @@ body{
 }
 
 .bg-dark {
-    background-color: #4c3673d4!important;
+    /*background-color: #4c3673d4!important;*/
 }
 
 .card {
+    background: bottom;
     margin: 0 auto 0 auto!important;
     width: 40vw;
+    border: 0;
 }
 
 footer{
@@ -25,10 +27,11 @@ footer{
 .logo{
     width: 72px;
     height: 72px;
+    margin: 0 auto;
 }
 
 .text-center{
-    width: 40vw;
+    /*width: 40vw;*/
     margin: 0 auto 0 auto!important;
 }
 
@@ -124,4 +127,29 @@ margin-top: 1rem;
 }
 .nav-item active {
   list-style: none;
+}
+
+.pb-5, .py-5 {
+    padding-bottom: 0!important; 
+}
+
+.card-body {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.col-form-label {
+    margin-right: -14px;
+}
+
+.btn-b:not(:disabled):not(.disabled) {
+    width: 100%;
+}
+
+.inic{
+    margin-bottom: 1rem!important; 
 }
