@@ -57,3 +57,7 @@ footer{
   background-color: violet;
 
 }
+
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
