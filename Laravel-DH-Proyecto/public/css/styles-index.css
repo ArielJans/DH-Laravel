@@ -18,11 +18,11 @@ footer{
     background-color: #4c3673d4!important;
 }
 
-
 .call-to-action{
     background-color: royalblue;
     text-align: center;
-    padding-bottom: 2rem;
+    border-radius: 5px;
+    line-height: 58px;
 }
 
 .tex-cta{

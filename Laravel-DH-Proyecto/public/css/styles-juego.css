@@ -22,10 +22,13 @@
       rgba(0, 0, 0, -0.5),
       rgba(0, 0, 0, 0.5)
       ),
-    url(../img/pregunta.png);
-
+    url(../images/pregunta.png);
     text-align: center;
     padding-top: 2%;
+}
+
+.text-left{
+    margin-left: 2%;
 }
 
 p{
@@ -44,9 +47,11 @@ h2{
 }
 
 .btn{
-    margin-top: 17px;
+    /*margin-top: 17px;*/
+    padding: 5px 3rem;
     margin-bottom: 16px;
     box-shadow: 8px 9px 12px 0px rgba(0, 0, 0, 0.29);
+    font-size: 1.5rem;
 }
 
 .navbar-brand{
@@ -150,4 +155,9 @@ form{
     height: 8px;
     border-radius: 50%;
     background: white;
+}
+
+.main.py-5 {
+    padding-top: 0rem!important;
+    padding-bottom: 0px!important;
 }
