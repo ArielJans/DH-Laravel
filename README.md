@@ -1,6 +1,6 @@
-# DH-Laravel
+DH-Laravel
 Proyecto Digital House con Laravel
-QuestionRace
+Juego de Preguntas y Respuestas: QuestionRace
 
 1- Clonar repositorio para tener el proyecto instalado de manera local. Ubicados en la ruta del proyecto ejecutar el comando:
 
