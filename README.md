@@ -6,7 +6,7 @@ QuestionRace
 
 composer install
 
-2- Crear Base de Datos llamada "questionrace" o importaría al directorio con preguntas
+2- Crear Base de Datos llamada "questionrace" o importarLa desde el directorio con preguntas
 
 Desde consola o desde phpMyAdmin.
 
@@ -16,9 +16,9 @@ Desde consola o desde phpMyAdmin.
 
 php artisan key:generate
 
-php artisan migrate(para crear las tablas) 
+php artisan migrate(para crear las tablas). De haberlo hecho manualmente no hacerlo
 
-php artisan db:seed (Genera usuario Administrador para interactuar con el Panel de Control)
+php artisan db:seed (Genera usuario Administrador para interactuar con el Panel de Control).dE HABER IMPORTADO BBSS CON PREGUNTAS NO HACERLO
 
 php artisan storage:link
 
