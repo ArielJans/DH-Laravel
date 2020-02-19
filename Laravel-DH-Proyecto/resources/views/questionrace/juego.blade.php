@@ -8,8 +8,8 @@
     <!-- ///////////////// LEFT ///////////////-->
     <div id="portada" class="left col-md-4">
         <h2>PUNTAJE: {{ session()->get('puntaje', 0) }} </h2>
-        <form id="juego" action="/juego/next" method="POST">
-            <h2 class="call-to-action">Pregunta #1</h2>
+        <form id="juego" action="/juego" method="POST">
+            <h2 class="call-to-action">Pregunta #{{$pregunta->id}}</h2>
             @csrf
             {{$pregunta->pregunta}}
             <br>
