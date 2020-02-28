@@ -29,32 +29,6 @@
         <button type="submit" class="btn btn-primary">Cargar</button>
     </form>
     <!-- FIN CARGAR PREGUNTA -->
-
-    <!-- ELIMINAR SI ANDA BIEN EL DE ARRIBA
-        <form class="w-100" action="/preguntas/agregar" method="POST">
-        
-            <h3 class="prueba">Sumá tu pregunta.</h3>
-            <br>
-            <textarea name="pregunta"></textarea>
-            <br>
-            <label>Y ahora las posibles respuestas.</label>
-            <br>
-            <label for="respuesta1">Respuesta 1:</label>
-            <br>
-            <input type="text" name="rta[1]" value="">
-            <br>
-            <label for="respuesta2">Respuesta 2:</label>
-            <br>
-            <input type="text" name="rta[2]" value="">
-            <br>
-            <label for="respuesta3">Respuesta Correcta:</label>
-            <br>
-            <input type="text" name="rta[C]" value="">
-            <br>
-            <br>
-
-            <button type="submit" class="btn btn-primary">Cargar</button>
-        </form> -->
-    </div>
+</div>
 
 @endsection
