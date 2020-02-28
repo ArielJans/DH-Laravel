@@ -20,7 +20,7 @@ Route::get('/ranking', 'RankingController@listar')->name('questionrace.ranking')
 
 Route::get('/juego', 'JuegoController@traerDatos')->middleware('auth');
 
-Route::post('/juego/next', 'JuegoController@verificacion');
+Route::post('/juego', 'JuegoController@verificacion');
 
 //LISTAR PREGUNTAS Y RESPUESTAS
 Route::get('/preguntas', 'PreguntasController@index')->middleware('admin');

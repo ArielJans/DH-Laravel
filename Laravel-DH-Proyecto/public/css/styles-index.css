@@ -9,9 +9,18 @@
 .bg-dark {
     background-color: #4c3673d4!important;
 }
+
+.container_cargar_preg{
+    background-image: url(../images/pregunta1.png);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
 .main.py-5{
+  /*background-image: url(../images/pregunta1.png);*/
   /*background-color: #673ab766;*/
   padding-top: 0rem!important;
+  padding-bottom: 0rem!important;
 }
 
 footer{
@@ -66,3 +75,30 @@ footer{
     padding-bottom: 1rem;
     height: 57px!important;
 }*/
+
+.tit_preg{
+    margin-bottom: 1rem;
+}
+
+.tit_res{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.form1{
+    background: #6a578acf;
+    padding: 2rem;
+    border-radius: 5px;
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+}

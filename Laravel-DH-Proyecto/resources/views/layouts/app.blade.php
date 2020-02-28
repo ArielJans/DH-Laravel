@@ -115,7 +115,7 @@
   <div class="container-fluid bg-inverse">
     <div class="row text-white py-4 text-white">
       <div class="col-md-3 footer-brand">
-        <img src="images/medal.png" class="float-left mr-3 imgfoter" alt="#">
+        <img src="../images/medal.png" class="float-left mr-3 imgfoter" alt="#">
         <h4 class="namber">QUESTION RACE</h4>
         <div class="blockquote-footer">Todos los derechos reservados <cite title="Source Title">2019</cite>
         </div>
