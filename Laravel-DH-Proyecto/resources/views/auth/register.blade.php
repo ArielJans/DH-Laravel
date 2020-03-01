@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 @section('styles','css/styles-login.css')
 @section('content')
@@ -71,7 +72,7 @@
                             <label for="avatar" class="col-md-3 col-form-label">{{ __('Avatar') }}</label>
 
                             <div class="col-md-6">
-                                <input id="avatar" type="file" class="@error('nombre') is-invalid @enderror" name="imagen" value="{{ old('avatar') }}" required autocomplete="avatar"> <!-- saque la clase form-control-->
+                                <input id="avatar" type="file" class="form-control @error('imagen') is-invalid @enderror" name="imagen" value="{{ old('avatar') }}" required autocomplete="avatar"> <!-- saque la clase form-control-->
 
                                 @error('avatar')
                                     <span class="invalid-feedback" role="alert">
@@ -93,6 +94,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
