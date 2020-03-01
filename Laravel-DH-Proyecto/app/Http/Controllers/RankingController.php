@@ -13,4 +13,10 @@ class RankingController extends Controller
         $a = 0;
         return view('questionrace.ranking', compact('ranking', 'a'));
     }
+    public function listado() {
+    	$a = 0;
+   		$ranking = Ranking::orderBy('puntaje', 'desc')->paginate(10);
+    return view('questionrace.ranking', compact('ranking', 'a'));
+  }
 }
+

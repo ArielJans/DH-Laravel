@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('questionrace.index');
 })->name('questionrace.index');
 
-Route::get('/ranking', 'RankingController@listar')->name('questionrace.ranking');
+Route::get('/ranking', 'RankingController@listado')->name('questionrace.ranking');
 
 
 Route::get('/juego', 'JuegoController@traerDatos')->middleware('auth');

@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-5">
+<div class="container py-5 text-center">
     <h3>
         <p class="descripcion">RANKING DE JUGADORES</p>
     </h3>
 </div>
-<div class="container py-1">
+<div class="container py-1 text-center">
     <table class="table table-hover">
   <thead>
   <tr class="table-warning">
@@ -25,8 +25,14 @@
     </tr>
     @endforeach
    </tbody>
-
 </table>
+
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+{{ $ranking->links()}}
+  </ul>
+</nav>
 
 
 </div>
