@@ -5,7 +5,7 @@
 }
 
 .bg-dark {
-    background-color: #4c3673d4!important;
+    background-color: rgba(106, 88, 139, 1)!important;
 }
 
 .row {
@@ -165,3 +165,4 @@ form{
 .prueba{
     color: #9C27B0;
 }
+
