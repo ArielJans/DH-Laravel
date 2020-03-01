@@ -46,17 +46,17 @@ class PreguntasController extends Controller
         $preguntas = DB::table('preguntas')
                 ->orderBy('id', 'desc')
                 ->first(); */
-        foreach ($request->rta as $key => $rta) {
-            $respuesta = new Respuesta;
-            $respuesta->respuesta = $rta;
-            $respuesta->validacion = ($key == 'C') ? 'c' : 'i' ;
-            $respuesta->id_pregunta = $pregunta->id;
-            $respuesta->save();
-        }
+                foreach ($request->rta as $key => $rta) {
+                    $respuesta = new Respuesta;
+                    $respuesta->respuesta = $rta;
+                    $respuesta->validacion = ($key == 'C') ? 'c' : 'i' ;
+                    $respuesta->id_pregunta = $pregunta->id;
+                    $respuesta->save();
+                }
 
 
-        return view('questionRace.cargarpreguntas',['mensaje' => 'Registro cargado con exito']);
-    }
+                return view('questionRace.cargarpreguntas',['mensaje' => 'Registro cargado con exito']);
+            }
 
     /**
      * Display the specified resource.
@@ -79,8 +79,8 @@ class PreguntasController extends Controller
     public function edit($id)
     {
         $pregunta = Pregunta::findOrFail($id);
-        //$respuestas = DB::table('respuestas')->where('id_pregunta', '=', $id)->get();
-        //dd($pregunta->respuestas, $respuestas );
+        $respuestas = DB::table('respuestas')->where('id_pregunta', '=', $id)->get();
+       //dd($pregunta->respuestas, $respuestas );
         //$rtas = $respuestas->toArray();
         return view('questionrace.admin.editarpregunta',compact('pregunta'));
     }
@@ -97,15 +97,22 @@ class PreguntasController extends Controller
         $pregunta->pregunta = $request->pregunta;
         $pregunta->save();
         $update="Ok";
-        foreach($request->rta as $rta) {
-            $respuesta = $pregunta->respuestas->firstWhere('id',$rta['id']);
-            if(is_object($respuesta)){
-            $respuesta->respuesta = $rta['respuesta'];
-            $respuesta->save();
-            }
+        $arrayId = [];
+        $posicionArray = 0;
+        foreach($pregunta->respuestas as $v1) {
+            $arrayId[] = $v1->id;
         }
+        foreach($request->rta as $rta) {
+            $respuesta = $pregunta->respuestas->firstWhere('id',$arrayId[$posicionArray]);
+                $posicionArray++;
+                if(is_object($respuesta)){
+                    $respuesta->respuesta = $rta['respuesta'];
+                    $respuesta->save();
+                }
+
+            }
         return redirect('/preguntas')->with('update', 'Modificacion Exitosa');
-    }
+        }
 
     /**
      * Remove the specified resource from storage.
