@@ -105,6 +105,7 @@
               @yield('content')
 </main>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="js/main.js"></script>
 <script>
   AOS.init();
 </script>

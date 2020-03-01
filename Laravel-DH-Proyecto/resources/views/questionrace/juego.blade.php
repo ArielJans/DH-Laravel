@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('styles','css/styles-juego.css')
 
+
 @section('content')
 
 <div class="row">
@@ -17,8 +18,8 @@
             @foreach($respuestas as $key => $respuesta)
 
 <div class=" btn-group-toggle btn-block" data-toggle="buttons">
-  <label class="btn btn-secondary active">
-    <input type="radio" name="rta"  value="{{$respuestas[$random[$key]]->respuesta}}" autocomplete="off" checked>{{$respuestas[$random[$key]]->respuesta}}
+  <label class="btn btn-secondary active" id="resp{{$key}}">
+    <input type="radio" name="rta" value="{{$respuestas[$random[$key]]->respuesta}}" checked>{{$respuestas[$random[$key]]->respuesta}}
   </label>
 </div>
             @endforeach
@@ -35,5 +36,4 @@
     </section>
     <!-- ///////////////// FIN IMAGENES RIGTH ///////////////-->
 </div>
-
 @endsection
