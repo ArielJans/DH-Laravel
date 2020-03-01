@@ -28,9 +28,9 @@ Route::get('/preguntas', 'PreguntasController@index')->middleware('admin');
 
 //AGREGAR PREGUNTAS Y RESPUESTAS
 //mostrar formulario agregar
-Route::get('/preguntas/agregar', 'PreguntasController@create');
+Route::get('/preguntas/agregar', 'PreguntasController@create')->middleware('admin');
 //procesar formulario agregar
-Route::post('/preguntas/agregar', 'PreguntasController@store');
+Route::post('/preguntas/agregar', 'PreguntasController@store')->middleware('admin');
 
 //MODIFICAR PREGUNTAS
 //mostrar formulario editar

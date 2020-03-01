@@ -8,7 +8,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>QuestionRace</title>
-  <link rel="shortcut icon" href="storage/logow.png">
+  <link rel="shortcut icon" href="images/medal.png">
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -56,10 +56,7 @@
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="/ranking">RANKING</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/preguntas/agregar">CARGA PREGUNTA</a>
-            </li>
+
 
             @guest
             <li class="nav-item">
@@ -79,7 +76,7 @@
           </ul>
           <img id="imgPerfil" src="/storage/{{Auth::user()->imagen}}" alt="">
           <ul id="user" class="navbar-nav text-right">
-            <li class="nav-item dropdown ">
+            <li class="nav-item active ">
               <a id="navbarDropdown" class="nav-link" href="#" role="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 {{ Auth::user()->user }} <span class="caret"></span>
               </a>
