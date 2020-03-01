@@ -15,12 +15,14 @@
             <br>
                 <input type="hidden" name="pregunta_id" value="{{$pregunta->id}}">
             @foreach($respuestas as $key => $respuesta)
-                <div class="text-left">
-                    <input name="rta" type="radio" value="{{$respuestas[$random[$key]]->respuesta}}"/>
-                    <span class="text-dark">{{$respuestas[$random[$key]]->respuesta}}</span><br>
-                </div>
+
+<div class=" btn-group-toggle btn-block" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <input type="radio" name="rta"  value="{{$respuestas[$random[$key]]->respuesta}}" autocomplete="off" checked>{{$respuestas[$random[$key]]->respuesta}}
+  </label>
+</div>
             @endforeach
-            <br>
+
             <button class="btn btn-primary" type="submit" name="enviar" id="btnjuego">Enviar</button>
         </form>
     </div>
