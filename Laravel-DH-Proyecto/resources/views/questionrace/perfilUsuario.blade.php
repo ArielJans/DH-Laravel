@@ -7,7 +7,8 @@
     <section class="row">
         <section class="left col-md-4">
             <h1 class="name">{{ Auth::user()->user }}</h1>
-            <img src="storage/{{ Auth::user()->imagen }}" alt="Imagen de perfil">
+            <img src="storage/@if(Auth::user()->imagen == ''){{'perfilGenerico.jpg'}}
+            @else{{Auth::user()->imagen}}@endif" alt="Imagen de perfil">
             <p>País: <strong>Argentina</strong></p>
             <button type="button" class="btn btn-perfil btn-primary">Cambiar avatar</button>
         </section>
