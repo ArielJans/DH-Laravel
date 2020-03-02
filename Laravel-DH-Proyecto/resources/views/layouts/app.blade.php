@@ -74,7 +74,7 @@
             </li>
             @endif
           </ul>
-          <img id="imgPerfil" src="/storage/{{Auth::user()->imagen}}" alt="">
+          {{-- <img id="imgPerfil" src="/storage/{{Auth::user()->imagen}}" alt="" > --}}
           <ul id="user" class="navbar-nav text-right">
             <li class="nav-item active ">
               <a id="navbarDropdown" class="nav-link" href="#" role="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

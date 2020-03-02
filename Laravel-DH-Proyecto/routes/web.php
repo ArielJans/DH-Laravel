@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('questionrace.index');
 })->name('questionrace.index');
 
+
+Route::get('/perfil', 'PerfilUsuarioController@index')->middleware('auth');
+
 Route::get('/ranking', 'RankingController@listado')->name('questionrace.ranking');
 
 
