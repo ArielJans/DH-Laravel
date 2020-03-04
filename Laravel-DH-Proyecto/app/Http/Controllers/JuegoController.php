@@ -61,7 +61,7 @@ class JuegoController extends Controller
         $preguntaAnterior = $req['id'];
         $pregunta = DB::table('preguntas')->where('id', '=', $preguntaAnterior + 1)->first();
         $respuestas = DB::table('respuestas')->where('id_pregunta', '=', $pregunta->id)->get();
-        //if($pregunta == null
-        return view('questionrace.juego', compact('pregunta', 'respuestas'));
+        if($pregunta == null)
+        return view('questionrace.ganaste', compact('pregunta', 'respuestas'));
     }
 }
