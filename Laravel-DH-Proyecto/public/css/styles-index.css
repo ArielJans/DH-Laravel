@@ -30,8 +30,11 @@ footer{
 .call-to-action{
     background-color: royalblue;
     text-align: center;
-    border-radius: 5px;
     line-height: 58px;
+}
+
+.callIndex{
+    padding-bottom: 3%;
 }
 
 .tex-cta{
@@ -85,15 +88,6 @@ footer{
     margin-bottom: 1rem;
 }
 
-label {
-    margin-top: 1rem;
-}
-
-.btn:not(:disabled):not(.disabled) {
-    width: 100%;
-    font-size: 1.5rem;
-}
-
 .form1{
     background: #6a578acf;
     padding: 2rem;
@@ -103,5 +97,10 @@ label {
     color: white;
 }
 
-.pagination {
+.btn-warning {
+    color: #177bff;
+}
+
+.btnWindex{
+    width: 20%;
 }

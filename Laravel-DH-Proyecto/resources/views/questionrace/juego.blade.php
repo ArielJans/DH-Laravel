@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('styles','css/styles-juego.css')
 
-
 @section('content')
 
 <div class="row">
@@ -17,11 +16,11 @@
                 <input type="hidden" name="pregunta_id" value="{{$pregunta->id}}">
             @foreach($respuestas as $key => $respuesta)
 
-<div class=" btn-group-toggle btn-block" data-toggle="buttons">
-  <label class="btn btn-secondary active" id="resp{{$key}}">
-    <input type="radio" name="rta" value="{{$respuestas[$random[$key]]->respuesta}}" checked>{{$respuestas[$random[$key]]->respuesta}}
-  </label>
-</div>
+            <div class=" btn-group-toggle btn-block" data-toggle="buttons">
+                <label class="btn btn-secondary active" id="resp{{$key}}">
+                    <input type="radio" name="rta" value="{{$respuestas[$random[$key]]->respuesta}}" checked>{{$respuestas[$random[$key]]->respuesta}}
+                </label>
+            </div>
             @endforeach
 
             <button class="btn btn-primary" type="submit" name="enviar" id="btnjuego">Enviar</button>

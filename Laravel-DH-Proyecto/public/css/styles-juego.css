@@ -169,3 +169,8 @@ form{
 #btnjuego {
     margin-top: 25px;
 }
+
+.btn:not(:disabled):not(.disabled) {
+    width: 100%;
+    font-size: 1.5rem;
+}

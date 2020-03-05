@@ -68,11 +68,11 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="avatar" class="col-md-3 col-form-label">{{ __('Avatar') }}</label>
+                        <div class="form-group formCustom row">
+                            <label for="avatar" class="col-md-3 col-form-label lavelCustom">{{ __('Avatar') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="avatar" type="file" class="form-control @error('imagen') is-invalid @enderror" name="imagen" value="{{ old('avatar') }}" required autocomplete="avatar"> <!-- saque la clase form-control-->
+                            <div class="col-md-9">
+                                <input id="avatar" type="file" class="form-control FCbiss @error('imagen') is-invalid @enderror" name="imagen" value="{{ old('avatar') }}" required autocomplete="avatar"> <!-- saque la clase form-control-->
 
                                 @error('avatar')
                                     <span class="invalid-feedback" role="alert">

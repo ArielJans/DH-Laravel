@@ -143,7 +143,7 @@ margin-top: 1rem;
 }
 
 .col-form-label {
-    margin-right: -14px;
+    margin-right: -35px;
 }
 
 .btn-b:not(:disabled):not(.disabled) {
@@ -152,4 +152,19 @@ margin-top: 1rem;
 
 .inic{
     margin-bottom: 1rem!important; 
+}
+
+
+.FCbiss{
+    width: 105%;
+    background-color: rgba(255, 255, 255, 0)!important;
+    border: none;
+}
+
+.lavelCustom{
+    margin-right: -50px;
+}
+
+.formCustom{
+    align-items: center!important;
 }

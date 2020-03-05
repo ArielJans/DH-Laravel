@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-<section class="call-to-action">
+<section class="call-to-action callIndex">
   <h2 class="tex-cta">Empeza a jugar ahora!!</h2>
-  <button type="button" class="btn btn-cta btn-primary btn-lg btn-warning"><a href="/juego">COMENZAR</a></button>
+  <a href="/juego" class="btn btn-primary btn-lg btn-warning btnWindex" role="button">COMENZAR</a>
 </section>
 
 <div class="container my-5">
