@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('questionrace.index');
 })->name('questionrace.index');
 
+Route::get('/ganaste', 'PerfilUsuarioController@create')->middleware('auth');
 
 Route::get('/perfil', 'PerfilUsuarioController@index')->middleware('auth');
 
@@ -22,6 +23,8 @@ Route::get('/ranking', 'RankingController@listado')->name('questionrace.ranking'
 
 
 Route::get('/juego', 'JuegoController@traerDatos')->middleware('auth');
+
+
 
 
 Route::post('/juego', 'JuegoController@verificacion'); //El juego pasa de pregunta si es correcta;
