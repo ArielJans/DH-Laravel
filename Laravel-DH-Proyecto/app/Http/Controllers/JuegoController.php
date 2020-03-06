@@ -22,9 +22,12 @@ class JuegoController extends Controller
         }
        /*  foreach($respuestas as $key => $respuesta){
             dd($respuestas[0]->respuesta);
-        } */
-        return view('questionrace.juego', [ 'pregunta' => $pregunta, 'respuestas' => $respuestas, 'random' => $random ]);
+        }
+         */
+
+  return view('questionrace.juego', [ 'pregunta' => $pregunta, 'respuestas' => $respuestas, 'random' => $random ]);
     }
+  
     public function verificacion(Request $req){
 
         $respuesta = DB::table('respuestas')->where([
@@ -61,7 +64,7 @@ class JuegoController extends Controller
         $preguntaAnterior = $req['id'];
         $pregunta = DB::table('preguntas')->where('id', '=', $preguntaAnterior + 1)->first();
         $respuestas = DB::table('respuestas')->where('id_pregunta', '=', $pregunta->id)->get();
-        if($pregunta == null)
+      //if($pregunta == null)
         return view('questionrace.ganaste', compact('pregunta', 'respuestas'));
     }
 }
