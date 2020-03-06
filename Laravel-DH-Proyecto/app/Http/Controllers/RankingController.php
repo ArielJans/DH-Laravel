@@ -8,15 +8,11 @@ use App\Ranking;
 
 class RankingController extends Controller
 {
-    public function listar(){
-        $ranking = Ranking::orderBy('puntaje', 'desc')->get();
-        $a = 0;
-        return view('questionrace.ranking', compact('ranking', 'a'));
-    }
     public function listado() {
     	$a = 0;
    		$ranking = Ranking::orderBy('puntaje', 'desc')->paginate(10);
     return view('questionrace.ranking', compact('ranking', 'a'));
   }
+  
 }
 

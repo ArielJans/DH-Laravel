@@ -24,9 +24,6 @@ Route::get('/ranking', 'RankingController@listado')->name('questionrace.ranking'
 
 Route::get('/juego', 'JuegoController@traerDatos')->middleware('auth');
 
-
-
-
 Route::post('/juego', 'JuegoController@verificacion'); //El juego pasa de pregunta si es correcta;
 
 //LISTAR PREGUNTAS Y RESPUESTAS

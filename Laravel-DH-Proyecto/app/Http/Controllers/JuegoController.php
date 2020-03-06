@@ -25,9 +25,9 @@ class JuegoController extends Controller
         }
          */
 
-  return view('questionrace.juego', [ 'pregunta' => $pregunta, 'respuestas' => $respuestas, 'random' => $random ]);
+        return view('questionrace.juego', [ 'pregunta' => $pregunta, 'respuestas' => $respuestas, 'random' => $random ]);
     }
-  
+
     public function verificacion(Request $req){
 
         $respuesta = DB::table('respuestas')->where([
@@ -41,7 +41,7 @@ class JuegoController extends Controller
         }
         foreach($respuesta as $rtaCorrecta);
         if ($req['rta'] == $rtaCorrecta->respuesta) {
-            $puntaje = session()->get('puntaje', 0);
+            $puntaje = session()->get('puntaje', 0); // ultimo puntaje recibido
             session(['puntaje' => ++$puntaje]);
             $preguntaAnterior = $req['pregunta_id'];
             $preguntaAnterior++;
@@ -49,11 +49,30 @@ class JuegoController extends Controller
             $respuestas = DB::table('respuestas')->where('id_pregunta', '=', $pregunta->id)->get();
             return view('questionrace.juego', compact('pregunta', 'respuestas', 'random'));;
         } else {
-            $puntajeFinal = new Ranking;
-            $puntajeFinal->usuario = Auth::user()->user;
-            $puntajeFinal->puntaje = session()->get('puntaje');
-            $puntajeFinal->save();
-            return view('questionrace.resultado');
+            $usuarioEncontrado = DB::table('Ranking')->where('usuario', '=', Auth::user()->user)->first(); //busca al usuario en la base de ranking
+            $puntajeAnterior = DB::table('Ranking')->where('usuario', '=', Auth::user()->user)->value('puntaje'); //busca su puntaje guardado
+            $puntaje = session()->get('puntaje', 0);
+           session(['mejorPuntaje' => $puntajeAnterior]);
+            if($usuarioEncontrado != '') // si es distinto de null es porque ya existe el usuario en la tabla de ranking
+            {
+                if($puntaje > $puntajeAnterior) //si el puntaje obtenido es mayor al registrado en la base lo reemplaza, sino solo muestra el resultado y se mantiene el mejor guardado para ver en el ranking
+                {
+                    DB::table('Ranking')->where('usuario', '=', Auth::user()->user)->update(['puntaje' => $puntaje]);
+                    session(['mejorPuntaje' => $puntaje]);
+                    return view('questionrace.resultado');
+                }
+                else{
+                    return view('questionrace.resultado');
+                }
+            }
+            else{ // si no existe el usuario en la tabla de ranking lo genera
+                $puntajeFinal = new Ranking;
+                $puntajeFinal->usuario = Auth::user()->user;
+                $puntajeFinal->puntaje = $puntaje;
+                session(['mejorPuntaje' => $puntaje]);
+                $puntajeFinal->save();
+                return view('questionrace.resultado');
+            }
         }
     }
 

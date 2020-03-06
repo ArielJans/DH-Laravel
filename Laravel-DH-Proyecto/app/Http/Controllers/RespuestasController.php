@@ -106,6 +106,8 @@ class RespuestasController extends Controller
     public function destroy($id)
     {
         Respuesta::destroy($id);
+                        //ALTER TABLE ranking DROP id;
+                //ALTER TABLE ranking ADD id int not null auto_increment primary key first;
         return redirect('/admin');
     }
 }

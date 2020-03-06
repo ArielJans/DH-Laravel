@@ -123,6 +123,8 @@ class PreguntasController extends Controller
     public function destroy($id)
     {
         Pregunta::destroy($id);
+                        //ALTER TABLE ranking DROP id;
+                //ALTER TABLE ranking ADD id int not null auto_increment primary key first;
         $delete='ok';
         return redirect('/preguntas')->with('delete', 'Eliminacion exitosa');
     }
