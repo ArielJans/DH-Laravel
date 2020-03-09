@@ -39,14 +39,25 @@ class JuegoController extends Controller
         foreach ($rand as $val) {
             $random[] = $val;
         }
+        $usuarioEncontrado = DB::table('Ranking')->where('usuario', '=', Auth::user()->user)->first(); 
+
         foreach($respuesta as $rtaCorrecta);
         if ($req['rta'] == $rtaCorrecta->respuesta) {
 
             $puntaje = session()->get('puntaje', 0); // ultimo puntaje recibido
             $puntaje = $puntaje + 10;
             session(['puntaje' => ++$puntaje]);
-            if($puntaje > 23)
+
+            if($puntaje >= 23 && $usuarioEncontrado != '')
             {
+                DB::table('Ranking')->where('usuario', '=', Auth::user()->user)->update(['puntaje' => $puntaje]);
+                return view('questionrace.ganaste');
+            }
+            if($puntaje >= 23 && $usuarioEncontrado == '') {
+                $puntajeFinal = new Ranking;
+                $puntajeFinal->usuario = Auth::user()->user;
+                $puntajeFinal->puntaje = $puntaje;
+                $puntajeFinal->save();
                 return view('questionrace.ganaste');
             }
             $preguntaAnterior = $req['pregunta_id'];
@@ -55,8 +66,8 @@ class JuegoController extends Controller
             $respuestas = DB::table('respuestas')->where('id_pregunta', '=', $pregunta->id)->get();
             return view('questionrace.juego', compact('pregunta', 'respuestas', 'random'));
         } else {
-            $usuarioEncontrado = DB::table('Ranking')->where('usuario', '=', Auth::user()->user)->first(); //busca al usuario en la base de ranking
-            $puntajeAnterior = DB::table('Ranking')->where('usuario', '=', Auth::user()->user)->value('puntaje'); //busca su puntaje guardado
+            //$usuarioEncontrado = DB::table('Ranking')->where('usuario', '=', Auth::user()->user)->first(); //busca al usuario en la base de ranking
+            $puntajeAnterior = DB::table('Ranking')->where('usuario', '=', Auth::user()->user)->value('puntaje'); //busca su puntaje guardado en ranking
             $puntaje = session()->get('puntaje', 0);
             session(['mejorPuntaje' => $puntajeAnterior]);
             if($usuarioEncontrado != '') // si es distinto de null es porque ya existe el usuario en la tabla de ranking
