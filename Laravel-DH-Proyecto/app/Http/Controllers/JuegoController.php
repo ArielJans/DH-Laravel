@@ -45,7 +45,7 @@ class JuegoController extends Controller
         if ($req['rta'] == $rtaCorrecta->respuesta) {
 
             $puntaje = session()->get('puntaje', 0); // ultimo puntaje recibido
-            $puntaje = $puntaje + 10;
+            //$puntaje = $puntaje + 10;
             session(['puntaje' => ++$puntaje]);
 
             if($puntaje >= 23 && $usuarioEncontrado != '')
