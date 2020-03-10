@@ -18,7 +18,7 @@
 --
 -- Table structure for table `migrations`
 --
-CREATE Database questionrace;
+
 
 DROP TABLE IF EXISTS `migrations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

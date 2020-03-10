@@ -37,7 +37,7 @@ crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link rel="stylesheet" href="@yield('styles')">
 </head>
-<body>
+<body onload="myFunction()">
 <span id="home"></span>
 <div id="app">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

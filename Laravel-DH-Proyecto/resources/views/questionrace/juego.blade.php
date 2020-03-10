@@ -10,11 +10,11 @@
     <div id="portada" class="left col-md-4">
         <h2>PUNTAJE: {{ session()->get('puntaje', 0) }} </h2>
         <form id="juego" action="/juego" method="POST">
-            <h2 class="call-to-action" id="rtaCorrecta">Pregunta #{{$pregunta->id}}</h2>
+            <h2 class="call-to-action">Pregunta #{{$pregunta->id}}</h2>
             @csrf
             {{$pregunta->pregunta}}
             <br>
-                <input type="hidden" name="pregunta_id" value="{{$pregunta->id}}">
+                <input type="hidden" name="pregunta_id" id="rtaCorrecta" value="{{$pregunta->id}}">
             @foreach($respuestas as $key => $respuesta)
 
             <div class=" btn-group-toggle btn-block" data-toggle="buttons">
@@ -37,40 +37,24 @@
     <!-- ///////////////// FIN IMAGENES RIGTH ///////////////-->
 
     <!-- ///////////////// JS PARA COORDENADAS ///////////////-->
-    <!--
     <script>
-    const rta = document.getElementById("rtaCorrecta");
-        juego.addEventListener("submit", e=>{
-            e.preventDefault()
-            if (rta.innerText == 2) {
-                //accion para respuesta incorrecta
-                alert("Respuesta incorrecta")
-            }else{
-                //Si es correcta aplicar nuevas coordenadas y continuar a la proxima pregunta
-                //document.getElementById("medal").style.margin-left = "28%";
-                alert("Respuesta correcta")
-            }
-        })
-    </script>
-    -->
+        document.querySelector("#rtaCorrecta").addEventListener("onload", myFunction)
 
-    <script>
-        const rta = document.querySelector("#rtaCorrecta").innerText; // Tomo bien el etxto y n° que cambia.
-        juego.addEventListener("submit", e=>{
-            //e.preventDefault()
-            if (rta == "Pregunta #3") {
-                //accion para respuesta incorrecta
-                //alert("Respuesta incorrecta")
-                //document.querySelector('#medal').style.margin-left = "28%";
-            }else{
-                //Si es correcta aplicar nuevas coordenadas y continuar a la proxima pregunta
-                //document.querySelector('#medal').style.margin-left = "28%";
-                //alert("Respuesta INCorrecta")
-            }
-        })
+        var nroPregunta = document.querySelector("#rtaCorrecta").value
         
+        function myFunction() {
+            if (nroPregunta == 2) {
+                //Si es correcta aplicar nuevas coordenadas y continuar a la proxima pregunta
+                document.querySelector('#medal').style = "margin-left:27%;"
+            }if (nroPregunta == 3) {
+                document.querySelector('#medal').style = "margin-left:35%;margin-top: 37%;"
+            }if (nroPregunta == 4) {
+                document.querySelector('#medal').style = "margin-left:42%;margin-top: 10%;margin-left: 58%;"
+            }if (nroPregunta == 5) {
+                document.querySelector('#medal').style = "margin-left:49%;margin-top: 8%;margin-left: 67%;"
+            }
+        }
     </script>
- <!-- style="property:value;" ???? -->
-<!-- ///////////////// FIN JS PARA COORDENADAS ///////////////-->
+    <!-- ///////////////// FIN JS PARA COORDENADAS ///////////////-->
 </div>
 @endsection
