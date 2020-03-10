@@ -277,3 +277,32 @@ form{
 .labelCustom{
     font-family: 'Roboto', sans-serif;
 }
+
+#astro {
+    background-image: url(../images/astro.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 54%;
+    height: 360px;
+    position: absolute !important;
+    left: 81%;
+    width: 15%;
+    animation: rot 10s infinite linear;
+    -webkit-animation: rot 10s infinite linear;
+}
+
+
+@keyframes rot{
+0% {
+    transform: rotate(0deg) translate(-30px) rotate(0deg);
+}
+100% {
+    transform: rotate(360deg) translate(-30px) rotate(-360deg);
+}
+}
+
+@media only screen and (max-width: 900px) {
+  footer {
+    display: none;
+  }
+}

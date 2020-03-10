@@ -33,6 +33,7 @@
     <section class="rigth col-md-8">
         <img src="images/fondo.jpg" class="img-back" alt="Imagen de fondo QUESTION RACE">
         <img src="images/medal.png" class="img-ficha" id="medal" alt="ficha de juego">
+        <div class="floating" id="astro">&nbsp;</div>
     </section>
     <!-- ///////////////// FIN IMAGENES RIGTH ///////////////-->
 
