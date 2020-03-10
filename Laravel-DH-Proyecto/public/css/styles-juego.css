@@ -259,3 +259,21 @@ form{
 .custex{
     font-family: 'Roboto', sans-serif;
 }
+
+.perfil{
+    margin-bottom: 12px;
+    border-radius: 50%;
+}
+
+.card_perfil{
+    margin-top: 15px;
+}
+
+.btn_act_datos{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.labelCustom{
+    font-family: 'Roboto', sans-serif;
+}
