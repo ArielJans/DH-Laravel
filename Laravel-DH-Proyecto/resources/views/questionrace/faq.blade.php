@@ -2,9 +2,9 @@
 @section('styles','css/styles-index.css')
 
 @section('content')
-<h1>¿Cómo podemos ayudarte?</h1>
-        <h4 class="email">Si no encuentras tu respuesta aquí, no dudes en enviarnos un email a <a href="">support@juego.com</a> </h4>
-        <div class="accordion" id="accordionExample">
+<h1 class="titulo">¿Cómo podemos ayudarte?</h1>
+        <h4 class="email titulo">Si no encuentras tu respuesta aquí, no dudes en enviarnos un email a <a href="">support@juego.com</a> </h4>
+        <div class="accordion a_cust" id="accordionExample">
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
