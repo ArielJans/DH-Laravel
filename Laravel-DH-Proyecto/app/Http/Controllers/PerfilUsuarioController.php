@@ -24,7 +24,7 @@ class PerfilUsuarioController extends Controller
      */
     public function create()
     {
-        return view('questionrace.ganaste');
+        return view('questionrace.faq');
     }
 
     /**

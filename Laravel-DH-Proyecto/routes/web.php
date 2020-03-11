@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('questionrace.index');
 })->name('questionrace.index');
 
-Route::get('/ganaste', 'PerfilUsuarioController@create')->middleware('auth');
+Route::get('/faq', 'PerfilUsuarioController@create');
 
 Route::get('/perfil', 'PerfilUsuarioController@index')->middleware('auth');
 

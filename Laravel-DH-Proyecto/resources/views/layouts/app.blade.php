@@ -55,6 +55,9 @@ crossorigin="anonymous"></script>
         <a class="nav-link" href="/">HOME</a>
       </li>
       <li class="nav-item active">
+        <a class="nav-link" href="/faq">FAQS</a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="/ranking">RANKING</a>
 
 
