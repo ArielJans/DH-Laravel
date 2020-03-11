@@ -14,7 +14,7 @@
 
 		<div class="row d-flex align-items-center my-5 py-5">
 			<div class="col-md-7">
-				<h2 class="display-4">Título del beneficio 1. <br><span class="text-muted">Sub titulo.</span></h2>
+				<h2 class="display-4">Desafía tu conocimiento<br><span class="text-muted">Te animas? </span></h2>
 				<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
 					euismod
 					semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus
@@ -33,7 +33,7 @@
 				<img class=" img-fluid mx-auto" src="images/cards2.png" alt="Generic placeholder image">
 			</div>
 			<div class="col-md-7">
-				<h2 class="display-4">Título del beneficio 2. <br><span class="text-muted">Sub titulo.</span></h2>
+				<h2 class="display-4">Las trivias más divertidas <br><span class="text-muted">Sub titulo.</span></h2>
 				<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
 					euismod
 					semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus
@@ -46,7 +46,7 @@
 
 		<div class="row d-flex align-items-center my-5 py-5">
 			<div class="col-md-7">
-				<h2 class="display-4">Título del beneficio 3. <br><span class="text-muted">Sub titulo.</span></h2>
+				<h2 class="display-4">Preguntas en general<br><span class="text-muted">Sub titulo.</span></h2>
 				<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
 					euismod
 					semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus

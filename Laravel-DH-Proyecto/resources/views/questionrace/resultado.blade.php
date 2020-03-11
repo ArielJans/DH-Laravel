@@ -9,7 +9,7 @@
   background-size: cover;">
 
 @section('content')
-<div id="portada" class="container py-5 text-center card" style="position: center; margin-top: 9rem; background-color: rgba(255,255,255, 0.6) !important;">
+<div id="portada" class="container py-5 text-center card" style="position: center; margin-top: 4rem; background-color: rgba(255,255,255, 0.6) !important;">
             <h1 class="won"><?= "EL JUEGO HA TERMINADO"?></h1>
             <h2 class="custex">Usuario: {{ Auth::user()->user }}</h2>
             <h2 class="custex">Puntaje obtenido: {{ session()->get('puntaje', 0) }} </h2>
